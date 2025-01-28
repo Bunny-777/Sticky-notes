@@ -22,7 +22,12 @@
                     <div class="task bg-zinc-800 px-3 py-3 w-72 rounded-md">
                         <h1 class="text-white text-3xl tracking-tighter" ><%= val %> </h1>
                         <a class="text-blue-500 inline-block mt-3" href="/files/<%=val %>" >Read more</a> 
-                        <a class="text-zinc-500 inline-block mt-3 px-7" href="/rename/<%= val%>">Rename</a>   
+                         
+                        <form class="inline-block px-10 text-red-500"  action="/delete/<%= val%>" method="POST">
+                            <button type="submit">Delete</button>
+                          </form>
+                          
+                        
                     </div>
                     <% }) %>
             <% } else{ %>

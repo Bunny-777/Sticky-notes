@@ -25,6 +25,12 @@ app.get('/rename/:filename',function(req,res){
     res.render('rename',{filename:req.params.filename});
 })
 
+app.post('/delete/:filename',function(req,res){ 
+    fs.unlink(`./files/${req.params.filename}`,function(err){
+        res.redirect('/');
+    })
+})
+
 app.post('/rename',function(req,res){
     fs.rename(`./files/${req.body.previous}`,`./files/${req.body.new}`,function(err){
         res.redirect('/');
@@ -32,13 +38,10 @@ app.post('/rename',function(req,res){
     
 })
 
-
 app.post('/create',function(req,res){
     fs.writeFile(`./files/${req.body.title.split(' ').join('').toLowerCase()}.txt`,req.body.details,function(err){
         res.redirect('/');
     })
 })
-
-
 
 app.listen(3000);
