@@ -8,7 +8,7 @@ Check out the live version of the app: [Sticky Notes App](https://sticky-notes-z
 ## Demo  
 Take a quick look at the app in action:  
 
-![Sticky Notes Demo](https://github.com/Bunny-777/Sticky-notes/blob/main/public/demo/sticky_Notes.mp4)  
+![video alt](https://github.com/Bunny-777/Sticky-notes/blob/main/public/demo/sticky_Notes.mp4)  
 
 ## Installation  
 
